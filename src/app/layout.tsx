@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { BizLinkProvider } from '@/context/BizLinkContext';
 import { ToastContainer } from '@/components/ui/ToastContainer';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'BizLink | Connected B2B Supply Chain & Business Discovery Network',
@@ -21,6 +22,7 @@ export default function RootLayout({
           {children}
           <ToastContainer />
         </BizLinkProvider>
+        <Analytics />
       </body>
     </html>
   );
